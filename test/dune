@@ -1,0 +1,6 @@
+(library
+ (name benchs)
+ (modules zmq_bench)
+ (libraries zmq zmq-lwt lwt types stats)
+ (preprocess
+  (pps lwt_ppx ppx_deriving.std)))

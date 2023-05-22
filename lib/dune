@@ -1,0 +1,20 @@
+(library
+ (name generator)
+ (modules generator)
+ (libraries str types lwt fmt)
+ (preprocess
+  (pps lwt_ppx ppx_deriving.std)))
+
+(library
+ (name types)
+ (modules types)
+ (libraries str lwt)
+ (preprocess
+  (pps lwt_ppx ppx_deriving.std)))
+
+(library
+ (name stats)
+ (modules stats)
+ (libraries str unix fmt yojson lwt)
+ (preprocess
+  (pps lwt_ppx ppx_deriving.std)))

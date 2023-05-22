@@ -1,0 +1,20 @@
+(executable
+ (name naive_bench)
+ (public_name naive_bench)
+ (modules naive_bench)
+ (libraries
+  fmt
+  fmt.tty
+  fmt.cli
+  cmdliner
+  lwt
+  eio
+  eio_main
+  lwt_eio
+  benchs
+  stats
+  types
+  generator
+  lwt.unix)
+ (preprocess
+  (pps lwt_ppx)))

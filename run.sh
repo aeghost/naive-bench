@@ -1,0 +1,1 @@
+dune exec bin/naive_bench.exe
